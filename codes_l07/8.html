@@ -1,0 +1,38 @@
+<!-- Write a JS code for a page where it has password field and username field, when you move focus to the password field, the background changes to yellow. If you move the mouse to the username field, the background changes to white. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-8</title>
+</head>
+<body>
+    <label for="username">
+        Username : <input type="text" placeholder="Enter your username">
+    </label>
+
+    <label for="password">
+        Password : <input type="password" placeholder="Enter your password">
+    </label>
+
+    <script>
+
+        let myfun1 = ()=>{
+            document.body.style.backgroundColor = "white";
+        }
+
+        let myfun2 = ()=>{
+            document.body.style.backgroundColor = "yellow";
+        }
+
+        let input1 = document.getElementsByTagName('input')[0];
+        let input2 = document.getElementsByTagName('input')[1];
+
+        input1.addEventListener('focus',myfun1);
+        input2.addEventListener('focus',myfun2);
+
+    </script>
+
+</body>
+</html>

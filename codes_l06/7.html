@@ -1,0 +1,37 @@
+<!-- Write a JS code to insert a new node before an existing node as a child node of a parent node. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-7</title>
+</head>
+
+<body>
+    <span>hiii i am span</span>
+    <script>
+        let all_child = document.body.childNodes;
+        let i = 0;
+        let first_child;
+
+        while (all_child[i].nodeType != Node.ELEMENT_NODE) {
+            i++;
+        }
+        first_child = all_child[i];
+        let parent = first_child.parentNode;
+
+        let div = document.createElement('div');
+        div.innerHTML = "hey i am div, new node";
+        first_child.before(div); // first_child.after(div);
+        /*
+          first_child.append(div);
+          first_child.prepend(div);
+          first_child.before(div);
+          first_child.replaceWith(div);  
+        */
+    </script>
+</body>
+
+</html>

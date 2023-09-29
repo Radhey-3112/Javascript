@@ -1,0 +1,36 @@
+<!-- Create a navbar and change the color of it's first element to the red -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+            padding: 5px;
+            background-color: cyan;
+        }
+        ul li{
+            list-style: none;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    <script>
+        let nav = document.getElementsByTagName('ul')[0];
+        nav.firstElementChild.style.color = "red";       
+    </script>
+</body>
+</html>

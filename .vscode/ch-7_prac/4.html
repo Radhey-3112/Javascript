@@ -1,0 +1,40 @@
+<!-- Write a js program to change background of all li tags to cyan -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            display: flex;
+            padding: 5px;
+        }
+        ul li{
+            list-style: none;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+    <script>
+         Array.from(document.getElementsByTagName('li')).forEach((ele)=>{
+            ele.style.backgroundColor = "cyan";
+         })
+    </script>
+
+</body>
+</html>
+
+<!-- for Q-5 ans is none of these because all function give closest not fatherest -->

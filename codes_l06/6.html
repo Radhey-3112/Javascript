@@ -1,0 +1,30 @@
+<!-- Write a JS code to create a list of <li> elements (<li>) and append each to the <ul> element using the DocumentFragment. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-6</title>
+</head>
+
+<body>
+    <ul></ul>
+    <script>
+        let name = ["Radha", "Krishna", "Balram"];
+        let doc = document.createDocumentFragment();
+
+        for (i of name) {
+            let li = document.createElement('li');
+            li.textContent = i;
+            doc.append(li);
+        }
+
+        let ul = document.getElementsByTagName('ul')[0];
+        ul.appendChild(doc);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!-- Write a JS code to move an existing child node to the new position within the document. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-4</title>
+</head>
+
+<body>
+    <span>Hey i am span</span>
+    <div>Hey i am div</div>
+
+    <script>
+        let all_child = document.body.childNodes;
+        let i = 0;
+        let first_child;
+
+        while (all_child[i].nodeType != Node.ELEMENT_NODE) {
+            i++;
+        }
+        first_child = all_child[i];
+        let parent = first_child.parentNode;
+        let node = first_child.nextSibling;
+
+        while (node.nodeType != Node.ELEMENT_NODE) {
+            node = node.nextSibling;
+        }
+
+        first_child.before(node);
+        console.log(first_child, node);
+
+    </script>
+</body>
+
+</html>

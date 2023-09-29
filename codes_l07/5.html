@@ -1,0 +1,46 @@
+<!-- Write a JS code that prints the screen, client and page co-ordinates based on mouse click event click in the page and some area of the page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-5</title>
+    <style>
+        div{
+            width: 600px;
+            height: 600px;
+            background-color: rgb(255, 213, 0);
+            border: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="btn"></div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        let myfun = (event) =>{
+            console.log(event);
+            let screen_x = event.screenX;
+            let screen_y = event.screenY;
+            document.getElementsByTagName('p')[0].innerHTML = "Screen X/Y = ("+ screen_x + ',' + screen_y + ')';
+
+            let client_x = event.clientX;
+            let client_y = event.clientY;
+            document.getElementsByTagName('p')[1].innerHTML = "Client X/Y = ("+ client_x + ',' + client_y + ')';
+
+            let page_x = event.pageX;
+            let page_y = event.pageY;
+
+            document.getElementsByTagName('p')[2].innerHTML = "Page X/Y = ("+ page_x + ',' + page_y + ')';
+
+        }
+        let btn = document.getElementById("btn");
+        btn.addEventListener('mouseup',myfun);
+    </script>
+    
+</body>
+</html>

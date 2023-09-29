@@ -1,0 +1,54 @@
+<!-- Write a js code to find nextSiblings, previousSiblings and all siblings -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-2</title>
+</head>
+
+<body>
+    <div></div>
+    <p></p>
+    <span></span>
+    <script>
+        let all = [];
+        let next = [];
+        let prev = [];
+
+        let parent = document.querySelector('body').childNodes;
+        let first = document.body.firstChild;
+        let last = document.body.lastChild;
+        if (first.nodeType != Node.ELEMENT_NODE) {
+            first = first.nextSibling;
+        }
+
+        let first_parent = first.parentNode.childNodes;
+        first_parent.forEach((ele) => {
+            if (ele.nodeType === Node.ELEMENT_NODE && ele != first) {
+                next.push(ele);
+            }
+        })
+
+        first_parent.forEach((ele) => {
+            if (ele.nodeType === Node.ELEMENT_NODE && ele != last) {
+                prev.push(ele);
+            }
+        })
+
+        parent.forEach((element) => {
+            if (element.nodeType === Node.ELEMENT_NODE) {
+                all.push(element);
+            }
+        });
+
+        console.log("All siblings are ", all);
+        console.log("All next siblings are ", next);
+        console.log("All prev siblings are ", prev);
+    </script>
+</body>
+
+</html>

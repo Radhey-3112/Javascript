@@ -1,0 +1,33 @@
+<!-- Use javascript to make a game of snake water & gun. The game will ask you to enter s,w or g and declare win or loss using alert use confirm or prompt whenever required. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-2</title>
+</head>
+<body>
+    <script>
+        let str = 'GSW';
+        let len = str.length;
+        let com = '';
+        // here Math.random() will generate random floating point numbers between 0 and 1 where Math.floor() will convert into integer and multiplication with the len will provide it a range 
+        com = str.charAt(Math.floor(Math.random()) * len);
+        let input = prompt("Enter S or W or G");
+        input = input.toUpperCase();
+
+        if(input == com){
+            alert("Draw match");
+        }
+        else if((input == 'S' && com == 'W') || (input == 'W' && com == 'G') || (input == 'G' && com == 'S')){
+            alert("You win the game");
+            console.log(input,com);
+        }
+        else{
+            alert("You loose the game");
+            console.log(input,com);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- Write a JS code to get the computed CSS properties of an element, a pseudo-element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-11</title>
+    <style>
+        h1 {
+            background-color: aqua;
+            font-size: 20px;
+        }
+
+        h1::before {
+            content: '';
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="myElement">hiiii</h1>
+    <script>
+        // Get a reference to the element whose styles you want to compute
+        const element = document.getElementById('myElement');
+
+        // Get the computed styles of the element
+        const computedStyles = window.getComputedStyle(element);
+
+        // Access specific computed properties
+        const backgroundColor = computedStyles.backgroundColor;
+        const fontSize = computedStyles.fontSize;
+
+        console.log('Background Color:', backgroundColor);
+        console.log('Font Size:', fontSize);
+
+
+        // Get the computed styles of the ::before pseudo-element
+        const pseudoStyles = window.getComputedStyle(element, '::before');
+
+        // Access specific computed properties for the pseudo-element
+        const contentValue = pseudoStyles.content;
+        const colorValue = pseudoStyles.color;
+
+        console.log('::before Content:', contentValue);
+        console.log('::before Color:', colorValue);
+
+
+    </script>
+</body>
+
+</html>

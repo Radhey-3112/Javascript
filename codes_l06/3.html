@@ -1,0 +1,22 @@
+<!-- Write a JS code to append list elements to the <ul> element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+</head>
+
+<body>
+    <ul></ul>
+    <script>
+        let li = document.createElement('li');
+        let a = document.getElementsByTagName('ul')[0];
+        a.append(li);
+        console.log(a.innerHTML);
+    </script>
+</body>
+
+</html>

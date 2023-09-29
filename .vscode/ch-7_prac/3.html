@@ -1,0 +1,23 @@
+<!-- Create an element with 3 children and change the color of first and last element to green -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-3</title>
+</head>
+<body>
+    <div>
+        <h1>I am first child</h1>
+        <h3>I am second child</h3>
+        <h2>I am third child</h2>
+    </div>
+    <script>
+        let first = document.getElementsByTagName('div')[0].firstElementChild;
+        let last = document.getElementsByTagName('div')[0].lastElementChild;
+        first.style.color = "green";
+        last.style.color = "green";
+    </script>
+</body>
+</html>

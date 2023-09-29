@@ -1,0 +1,22 @@
+<!-- Write a JS code to read and write text content of an element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-5</title>
+</head>
+
+<body>
+    <h1>Hii this is old text</h1>
+    <script>
+        let h1 = document.getElementsByTagName('h1')[0];
+        console.log(h1.textContent);
+        h1.innerHTML = "Hiii this is new text"; // h1.textContent also can be used
+        console.log(h1.textContent);
+    </script>
+</body>
+
+</html>

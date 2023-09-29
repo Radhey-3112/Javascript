@@ -1,0 +1,24 @@
+<!-- Write a JS code to select a button, change its caption and disable it for user click. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-9</title>
+</head>
+
+<body>
+    <button>Hiii this is the old caption of button</button>
+    <script>
+        let btn = document.getElementsByTagName('button')[0];
+        console.log(btn.textContent);
+        btn.setAttribute("disabled", "disabled");
+        btn.textContent = "This is the new caption of the button";
+        console.log(btn.textContent);
+        console.log(btn.attributes);
+    </script>
+</body>
+
+</html>

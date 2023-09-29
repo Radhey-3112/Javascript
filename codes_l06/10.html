@@ -1,0 +1,25 @@
+<!-- Write a JS code to check if the button has the disabled attribute and if yes, then remove disabled attribute. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-10</title>
+</head>
+
+<body>
+    <button disabled>Click</button>
+    <script>
+        let btn = document.getElementsByTagName('button')[0];
+        let attributes = btn.attributes; // You can also use btn.getAttribute("disabled")
+        console.log(attributes);
+        if (btn.hasAttribute("disabled")) {
+            btn.removeAttribute("disabled");
+        }
+        console.log(btn.attributes);
+    </script>
+</body>
+
+</html>

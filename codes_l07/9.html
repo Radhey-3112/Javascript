@@ -1,0 +1,39 @@
+<!-- Steps for event delegation :
+
+<ul> element is clicked.
+The event goes in the capturing phase.
+It reaches the target (<li> in our case).
+It switches to the bubbling phase.
+When it hits the <ul> element, it runs the event listener.
+Inside the listener function event.target is the element that was clicked.
+Event.target provides us access to the <li> element that was clicked.
+The .nodeName property of the .target allows us to identify a specific node. If our parent element contains more than one child element then we can identify specific elements by using the .nodeName property. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-9</title>
+</head>
+
+<body>
+    <div>
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('button')
+
+        buttons.forEach(button => {
+            button.addEventListener("click", (event) => {
+                console.log(event.target.innerText)
+            })
+        })
+
+    </script>
+</body>
+
+</html>
